@@ -4,6 +4,7 @@ fetch('../navbar.html')
         document.getElementById('navbar-container').innerHTML = data;
       })
       .catch(error => console.error('Error loading navbar:', error));
+      
 function updateClock() {
     const now = new Date();
     const timeString = now.toLocaleTimeString();
