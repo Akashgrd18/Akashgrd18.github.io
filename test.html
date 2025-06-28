@@ -1,121 +1,77 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Link Planner</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #f0f4ff, #e6f7ff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      margin-top: 80px;
-      text-align: center;
-      color: #222;
-    }
-
-    #searchInput {
-      display: block;
-      margin: 40px auto 20px auto;
-      padding: 10px 15px;
-      width: 250px;
-      font-size: 16px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-     
-    }
-
-    #searchInput:focus {
-      border-color: #0078d7;
-      box-shadow: 0 0 8px rgba(0, 120, 215, 0.3);
-      outline: none;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto 50px auto;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .card {
-      flex: 0 0 180px;
-      height: 120px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      color: #fff;
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .card h3 {
-      font-size: 17px;
-      margin: 0;
-    }
-
-    .link-a { background-color: #3498db; }
-    .link-b { background-color: #2ecc71; }
-    .link-c { background-color: #e67e22; }
-    .link-d { background-color: #9b59b6; }
-    .link-e { background-color: #e74c3c; }
-  </style>
+    <meta charset="UTF-8">
+    <title>B2B Morning Checks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+        }
+        p {
+            font-size: 16px;
+            color: #333333;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background-color: #f9f9a9;
+            padding: 10px;
+            border-left: 5px solid #f1c40f;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>B2B Morning Checks</h1>
+        
+        <h2>3:40 AM IST</h2>
+        <p>Check if the logs are above 10. If not, inform L2.</p>
+        <ul>
+            <li><a href="https://one.newrelic.com/logger?account=3939452&amp;begin=1734027190716&amp;end=1734048790716&amp;state=2240773f-d13f-faf6-e340-86fa84dbe4a6" target="_blank">Link 1</a></li>
+            <li><a href="https://one.newrelic.com/logger?account=3939452&amp;duration=86400000&amp;state=414ef430-cbc7-0df6-6ccd-bc116f8e4c39" target="_blank">Link 2</a></li>
+            <li><a href="https://one.newrelic.com/logger?account=3939452&amp;begin=1734027214120&amp;end=1734048814120&amp;state=cc2665a1-e1c0-4707-1513-2af434c6c476" target="_blank">Link 3</a></li>
+        </ul>
 
-  <h1>Link Planner</h1>
-  <input type="text" id="searchInput" placeholder="Search" onkeyup="searchLinks()" />
 
-  <div class="container">
-    <a href="linkA_task1.html"><div class="card link-a"><h3>L1.5 Roster</h3></div></a>
-    <a href="linkB_task1.html"><div class="card link-b"><h3>M2 Roster</h3></div></a>
-    <a href="linkC_task1.html"><div class="card link-c"><h3>BAT Handbook</h3></div></a>
-    <a href="linkD_task1.html"><div class="card link-d"><h3>Ageing Report</h3></div></a>
-    <a href="linkE_task1.html"><div class="card link-e"><h3>ADO Handover</h3></div></a>
-    <a href="linkA_task1.html"><div class="card link-a"><h3>L1.5 Roster</h3></div></a>
-    <a href="linkB_task1.html"><div class="card link-b"><h3>M2 Roster</h3></div></a>
-    <a href="linkC_task1.html"><div class="card link-c"><h3>BAT Handbook</h3></div></a>
-    <a href="linkD_task1.html"><div class="card link-d"><h3>Ageing Report</h3></div></a>
-    <a href="linkE_task1.html"><div class="card link-e"><h3>ADO Handover</h3></div></a>
-    <a href="linkA_task1.html"><div class="card link-a"><h3>L1.5 Roster</h3></div></a>
-    <a href="linkB_task1.html"><div class="card link-b"><h3>M2 Roster</h3></div></a>
-    <a href="linkC_task1.html"><div class="card link-c"><h3>BAT Handbook</h3></div></a>
-    <a href="linkD_task1.html"><div class="card link-d"><h3>Ageing Report</h3></div></a>
-    <a href="linkE_task1.html"><div class="card link-e"><h3>ADO Handover</h3></div></a>
-  </div>
+        <h2>Additional Checks to Perform – 04:30 AM IST</h2>
+        <p>Look at the <strong>Order Sent to Swift Plus</strong> and <strong>Order Sent to OMS</strong>.</p>
+        <p><a href="https://onenr.io/0VRVVkzXGRa" target="_blank">Click Me</a></p>
+        <p><strong>CHECK 1 at 04:00 AM: </strong>If the count is less than 300, inform L2.</p>
+        <p><strong>CHECK 2 at 04:30 AM: </strong>If the count is less than 500, inform L2.</p>
+        
 
-  <script>
-    function searchLinks() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
+        <div class="note">
+            <strong>Note:</strong> Set duration to 6 hrs.
+        </div>
 
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(input) ? '' : 'none';
-      });
-    }
-  </script>
+        <h3><a href="https://cognizantonline-my.sharepoint.com/:w:/r/personal/745931_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7B6EDB00C5-6CD3-41DA-9859-B75476169CAF%7D&file=B2B%20morning%20daily%20order%20checks.docx&wdLOR=cAF59BF48-C162-43E1-8765-AC3F780123FB&action=default&mobileredirect=true">Click me for SOP.</a></h3>
 
+    </div>
 </body>
 </html>
