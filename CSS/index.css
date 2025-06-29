@@ -22,12 +22,25 @@ body {
 }
 
 h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: #4aa72e;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: yellow;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: glowBounce 2s ease-in-out infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes glowBounce {
+    0%, 100% {
+      transform: translateY();
+      text-shadow: 0 0 10px #4aa72e, 0 0 20px #4aa72e, 0 0 30px #4aa72e;
+    }
+    50% {
+      transform: translateY(-8px);
+      text-shadow: 0 0 20px #6fdc3f, 0 0 30px #6fdc3f, 0 0 0px #6fdc3f;
+    }
+  }
+  
 p {
   font-size: 20px;
   margin-bottom: 30px;
