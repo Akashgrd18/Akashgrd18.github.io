@@ -6,6 +6,15 @@ fetch('../navbar.html')                               //navbar in all pages
       })
       .catch(error => console.error('Error loading navbar:', error));
 
+      fetch('../footer.html')                               //footer in all pages
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        
+      })
+      .catch(error => console.error('Error loading footer:', error));
+
+
 
 
       function Time(){
@@ -34,6 +43,7 @@ fetch('../navbar.html')                               //navbar in all pages
             const time = new Intl.DateTimeFormat('en-US', {
               hour: '2-digit',
               minute: '2-digit',
+              second: '2-digit',
               timeZone: zone,
               hour12: true
             }).format(now);

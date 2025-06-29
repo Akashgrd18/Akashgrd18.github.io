@@ -4,108 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Compact Navbar with Dropdowns</title>
+  <link rel="stylesheet" href="/CSS/navbar.css">
   
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .navbar {
-      background-color: #333;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 0px 0;
-      height: 50px;
-    }
-
-    .navbar-left,
-    .navbar-center,
-    .navbar-right {
-      flex: 1;
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar-left {
-      justify-content: flex-start;
-      padding-left: 10px;
-    }
-
-    .navbar-center {
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .navbar-right {
-      justify-content: flex-end;
-      padding-right: 10px;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropbtn {
-      background-color: #333;
-      color: white;
-      padding: 8px 12px;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .dropbtn:hover {
-      background-color: #575757;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #0d0101;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      z-index: 1001;
-      top: 100%;
-      left: 0;
-    }
-
-    .dropdown-content a {
-      color: rgb(247, 243, 243);
-      padding: 10px 14px;
-      text-decoration: none;
-      display: block;
-      font-size: 14px;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #685e5e;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    #clock {
-      color: #e6f7ff;
-      font-size: 18px;
-      background-color: #333;
-    }
-
-    .navbar a {
-      color: #ffffff;
-      padding: 8px 20px;
-      text-decoration: none;
-      text-align: center;
-    }
-    
-  </style>
+ 
 </head>
 <body>
  
@@ -172,6 +73,7 @@
           <a href="https://bat.sharepoint.com/:x:/r/sites/Magento2BAUroom/_layouts/15/doc2.aspx?sourcedoc=%7BB679A3F4-7D8B-457E-8F34-B8AF32137888%7D&file=AEM%20-%20Cognizant%20Support%20Roster%20.xlsx&action=default&mobileredirect=true&ovuser=de08c407-19b9-427d-9fe8-edf254300ca7%2C2153037%40cognizant.com&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA3MTEyODgyNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&wdLOR=cAEEC1CCC-9177-4042-AD21-9B9146B92062" target="_blank">AEM</a>
           <a href="https://cognizantonline.sharepoint.com/:x:/s/ShopifyPlatformCognizant/EUnATSzE1z1NrN4qXyCFtNIBHDO7mNkIwN5ZC3g0NRzvwQ?e=RubZ9Y&wdLOR=cE54F5C0C-BA7F-4377-ACD6-47ED7489927E" target="_blank">Shopify</a>
           <a href=" https://cognizantonline-my.sharepoint.com/:x:/r/personal/745931_cognizant_com/Documents/BAT-L1.5-April1%20files%20folder/BAT%20Shift%20Schedule.xlsx?d=w161188e422104eb585daf9866801a659&csf=1&web=1&e=R0GQJq" target="_blank">L1.5</a>
+          <a href="https://cognizantonline-my.sharepoint.com/:x:/r/personal/672054_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7BDF161690-F472-4D24-A6F1-374103BC3EFB%7D&file=Vuse%20CA%20Custom%20Apps%20-%20Cognizant%20Support%20Roster.xlsx&action=default&mobileredirect=true" target="_blank">Custom Apps</a>
           <a href="https://cognizantonline.sharepoint.com/:x:/r/sites/BAT/_layouts/15/Doc.aspx?sourcedoc=%7B0C38F3A3-3235-44B3-8EE1-385433F71CFE%7D&file=CloudDBDevOps%20Support%20Roster%20-%20BAT.xlsx&action=default&mobileredirect=true&wdLOR=c314BAA0C-A44C-45E6-BAF6-FBD11B92E2FF">DevOps</a>
         </div>
         
@@ -179,15 +81,15 @@
 
       <!-- Contact Dropdown -->
       <div class="dropdown">
-        <button class="dropbtn">Contact</button>
+        <button class="dropbtn" style="color: #ff4c4c;">Updates </button>
         <div class="dropdown-content">
-          <a href="#">Email</a>
-          <a href="#">Phone</a>
+          <a href="/Updates/NEW_TEMPORARY_QUALYS_SCAN_SCHEDULE.html">NEW TEMPORARY QUALYS SCAN SCHEDULE</a>
+          
         </div>
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn" style="font-size: 22px;">🕒</button>
+        <button class="dropbtn" style="font-size: 12px;">World🕒</button>
         <a class="dropdown-content" id="custom-timezone-dropdown" style="color: #e6f7ff;">
           <!-- Dynamic options will be inserted here -->
         </a>
