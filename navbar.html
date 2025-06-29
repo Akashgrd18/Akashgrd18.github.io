@@ -104,10 +104,11 @@
       text-decoration: none;
       text-align: center;
     }
+    
   </style>
 </head>
 <body>
-
+ 
   <!-- Navigation Bar -->
   <div class="navbar">
     <!-- Left section: Back link -->
@@ -171,7 +172,7 @@
           <a href="https://bat.sharepoint.com/:x:/r/sites/Magento2BAUroom/_layouts/15/doc2.aspx?sourcedoc=%7BB679A3F4-7D8B-457E-8F34-B8AF32137888%7D&file=AEM%20-%20Cognizant%20Support%20Roster%20.xlsx&action=default&mobileredirect=true&ovuser=de08c407-19b9-427d-9fe8-edf254300ca7%2C2153037%40cognizant.com&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA3MTEyODgyNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&wdLOR=cAEEC1CCC-9177-4042-AD21-9B9146B92062" target="_blank">AEM</a>
           <a href="https://cognizantonline.sharepoint.com/:x:/s/ShopifyPlatformCognizant/EUnATSzE1z1NrN4qXyCFtNIBHDO7mNkIwN5ZC3g0NRzvwQ?e=RubZ9Y&wdLOR=cE54F5C0C-BA7F-4377-ACD6-47ED7489927E" target="_blank">Shopify</a>
           <a href=" https://cognizantonline-my.sharepoint.com/:x:/r/personal/745931_cognizant_com/Documents/BAT-L1.5-April1%20files%20folder/BAT%20Shift%20Schedule.xlsx?d=w161188e422104eb585daf9866801a659&csf=1&web=1&e=R0GQJq" target="_blank">L1.5</a>
-          <!-- <a href="#">A</a> -->
+          <a href="https://cognizantonline.sharepoint.com/:x:/r/sites/BAT/_layouts/15/Doc.aspx?sourcedoc=%7B0C38F3A3-3235-44B3-8EE1-385433F71CFE%7D&file=CloudDBDevOps%20Support%20Roster%20-%20BAT.xlsx&action=default&mobileredirect=true&wdLOR=c314BAA0C-A44C-45E6-BAF6-FBD11B92E2FF">DevOps</a>
         </div>
         
       </div>
@@ -184,24 +185,25 @@
           <a href="#">Phone</a>
         </div>
       </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" style="font-size: 22px;">🕒</button>
+        <a class="dropdown-content" id="custom-timezone-dropdown" style="color: #e6f7ff;">
+          <!-- Dynamic options will be inserted here -->
+        </a>
+      </div>
     </div>
 
     <!-- Right section: Clock -->
     <div class="navbar-right">
-      <h2 id="clock"></h2>
+      
+      <a href="/international_clock.html"><h2 id="clock"></h2></a>
+      
+      
     </div>
   </div>
 
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const timeString = now.toLocaleTimeString();
-      document.getElementById('clock').textContent = timeString;
-    }
-
-    setInterval(updateClock, 1000);
-    updateClock(); // initial call
-  </script>
-
+  <script src="/JS/script.js" ></script>
+  
 </body>
 </html>
