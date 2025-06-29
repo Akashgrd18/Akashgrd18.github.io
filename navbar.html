@@ -4,8 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Compact Navbar with Dropdowns</title>
-  <link rel="stylesheet" href="/CSS/navbar.css">
-  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0px 0;
+      height: 50px;
+    }
+    
+    .navbar-left,
+    .navbar-center,
+    .navbar-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-left {
+      justify-content: flex-start;
+      padding-left: 10px;
+    }
+    
+    .navbar-center {
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .navbar-right {
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropbtn {
+      background-color: #333;
+      color: white;
+      padding: 8px 12px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropbtn:hover {
+      background-color: #575757;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0d0101;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1001;
+      top: 100%;
+      left: 0;
+    }
+    
+    .dropdown-content a {
+      color: rgb(247, 243, 243);
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #685e5e;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    #clock {
+      color: #e6f7ff;
+      font-size: 18px;
+      background-color: #333;
+    }
+    
+    .navbar a {
+      color: #ffffff;
+      padding: 8px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    </style>
+ 
  
 </head>
 <body>
@@ -50,7 +149,9 @@
         <div class="dropdown-content">
           <a href="https://batnowprod.service-now.com/nav_to.do?uri=%2Fincident.do%3Fsys_id%3D3e27f7a6335ea2d4c8b08539bd5c7b0a%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D68%26sysparm_record_list%3Dassignment_group%3D11635cd61bae7c500229a8afe54bcbf2%5EORassignment_group%3Dd78c21ca1b67c9d0ce28840de54bcbbd%5EORassignment_group%3D3a53d4d61bae7c500229a8afe54bcbb1%5EORassignment_group%3D0bb3ede39762929434f530efe153aff8%5EORassignment_group%3D0fd7d1e5c36e5650c7c344d9d00131cd%5EstateNOT%2BIN6,7,8%5EORDERBYDESCnumber" target="_blank">BAT HANDBOOK</a>
           <a href="https://cognizantonline-my.sharepoint.com/:w:/r/personal/745931_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7B6EDB00C5-6CD3-41DA-9859-B75476169CAF%7D&file=B2B%20morning%20daily%20order%20checks.docx&wdLOR=cAF59BF48-C162-43E1-8765-AC3F780123FB&action=default&mobileredirect=true" target="_blank">B2B Morning checks</a>
-          <a href="#">Resources</a>
+          
+          <a href="https://bat.sharepoint.com/:w:/r/sites/MY50-ShopifyBAURoom/_layouts/15/Doc.aspx?sourcedoc=%7B9F185201-55DF-4D74-AAAB-EAC111D142E1%7D&file=L1.5%20Shopify%20Process%20Handbook%20-%20Digital%20Velocity.docx&action=default&mobileredirect=true" target="_blank">L1.5 Shopify - Digital Velocity</a>
+          <a href="https://cognizantonline-my.sharepoint.com/:w:/g/personal/745931_cognizant_com/EcfXR7U5pGBKmIt0ZqiL1ZEBEG0Hk3AOQMNWYlRKymFqHg?e=nUSxKw" target="_blank">Vuse CA -L1.5</a>
         </div>
       </div>
       <!-- MBO Dropdown -->
@@ -74,7 +175,7 @@
           <a href="https://cognizantonline.sharepoint.com/:x:/s/ShopifyPlatformCognizant/EUnATSzE1z1NrN4qXyCFtNIBHDO7mNkIwN5ZC3g0NRzvwQ?e=RubZ9Y&wdLOR=cE54F5C0C-BA7F-4377-ACD6-47ED7489927E" target="_blank">Shopify</a>
           <a href=" https://cognizantonline-my.sharepoint.com/:x:/r/personal/745931_cognizant_com/Documents/BAT-L1.5-April1%20files%20folder/BAT%20Shift%20Schedule.xlsx?d=w161188e422104eb585daf9866801a659&csf=1&web=1&e=R0GQJq" target="_blank">L1.5</a>
           <a href="https://cognizantonline-my.sharepoint.com/:x:/r/personal/672054_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7BDF161690-F472-4D24-A6F1-374103BC3EFB%7D&file=Vuse%20CA%20Custom%20Apps%20-%20Cognizant%20Support%20Roster.xlsx&action=default&mobileredirect=true" target="_blank">Custom Apps</a>
-          <a href="https://cognizantonline.sharepoint.com/:x:/r/sites/BAT/_layouts/15/Doc.aspx?sourcedoc=%7B0C38F3A3-3235-44B3-8EE1-385433F71CFE%7D&file=CloudDBDevOps%20Support%20Roster%20-%20BAT.xlsx&action=default&mobileredirect=true&wdLOR=c314BAA0C-A44C-45E6-BAF6-FBD11B92E2FF">DevOps</a>
+          <a href="https://cognizantonline.sharepoint.com/:x:/r/sites/BAT/_layouts/15/doc2.aspx?sourcedoc=%7B0C38F3A3-3235-44B3-8EE1-385433F71CFE%7D&file=CloudDBDevOps%20Support%20Roster%20-%20BAT.xlsx&action=default&mobileredirect=true&wdLOR=cBF6DF6EA-50FC-48C2-9561-EEF58C6857B1" target="_blank">DevOps</a>
         </div>
         
       </div>
