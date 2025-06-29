@@ -1,10 +1,12 @@
-fetch('../navbar.html')
+fetch('../navbar.html')                               //navbar in all pages
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
         Time();
       })
       .catch(error => console.error('Error loading navbar:', error));
+
+
 
       function Time(){
         const clockElement = document.getElementById('clock');
@@ -65,7 +67,23 @@ fetch('../navbar.html')
         updateClock();
         }
       
+
+        //back and forword
+        document.addEventListener("DOMContentLoaded", function () {
+          document.addEventListener("dblclick", function (event) {
+            const screenWidth = window.innerWidth;
+            const clickX = event.clientX;
         
+            if (clickX < screenWidth / 2) {
+              // Left side double-click → Back
+              history.back();
+            } else {
+              // Right side double-click → Forward
+              history.forward();
+            }
+          });
+        });
+               
 
   
   
