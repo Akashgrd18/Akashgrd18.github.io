@@ -3,18 +3,27 @@ fetch('../navbar.html')                               //navbar in all pages
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
         Time();
+        news_ticker();
       })
       .catch(error => console.error('Error loading navbar:', error));
 
-      fetch('../footer.html')                               //footer in all pages
+      fetch('/Footer/footer.html')                               //footer in all pages
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer-container').innerHTML = data;
         
       })
       .catch(error => console.error('Error loading footer:', error));
-
-
+      
+      function news_ticker(){
+      fetch('/Footer/new_ticker_footer.html')                               //test in all pages
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('test-container').innerHTML = data;
+        
+      })
+      .catch(error => console.error('Error loading footer:', error));
+    }
 
 
       function Time(){
