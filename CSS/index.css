@@ -82,3 +82,22 @@ p {
    color: #ccc;
    }
   
+       .update {
+         position: absolute;
+         bottom: 10px;
+         right: 10px;
+         margin: 0;
+         font-size: 0.7em;
+       }
+   
+       .update a {
+         color: #93c3f5;
+         text-decoration: none;
+         font-style: italic;
+       }
+   
+       .update a:hover {
+         font-weight: bolder;
+         color: #076bd5;
+       }
+    

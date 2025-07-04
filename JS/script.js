@@ -16,7 +16,7 @@ fetch('/Footer/footer.html')                               //footer in all pages
   .catch(error => console.error('Error loading footer:', error));
 
 function news_ticker() {
-  fetch('/Footer/new_ticker_footer.html')                               //test in all pages
+  fetch('/Footer/new_ticker_footer.html')                               //news ticker in all pages
     .then(response => response.text())
     .then(data => {
       document.getElementById('test-container').innerHTML = data;
@@ -26,7 +26,7 @@ function news_ticker() {
 }
 
 
-function Time() {
+function Time() {                                                                              //this for world time included in navbar
   const clockElement = document.getElementById('clock');
   const timezoneSelect = document.getElementById('custom-timezone-dropdown');
 
@@ -85,6 +85,22 @@ function Time() {
   populateDropdown();
   updateClock();
 }
+const token = localStorage.getItem('token');                              //For token expiration check
+
+    function isTokenExpired(token) {
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        const now = Math.floor(Date.now() / 1000);
+        return now >= payload.exp;
+      } catch (e) {
+        return true; // Treat malformed token as expired
+      }
+    }
+
+    if (!token || isTokenExpired(token)) {
+      localStorage.removeItem('token');
+      window.location.href = '/signin.html';
+    }
 
 
 //back and forword
@@ -103,6 +119,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Logout function
+function logout() {
+  localStorage.removeItem('token'); // or sessionStorage
+  window.location.href = '/signin.html'; // Redirect to login page
+}
 
 
 

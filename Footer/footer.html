@@ -10,35 +10,50 @@
     }
 
     .footer {
-      position: fixed;
       background-color: #242323;
       color: white;
-      text-align: center;
-      padding: 1px 0;
+      padding: 10px 20px;
       position: relative;
-      bottom: 0;
       width: 100%;
-      
+    }
+
+    .footer p {
+      margin: 0;
+      text-align: center;
     }
 
     .footer a {
       color: #00aced;
       text-decoration: none;
-      margin: 0 10px;
+      margin-left: 10px;
     }
 
     .footer a:hover {
       text-decoration: underline;
     }
+
+    .updated {
+      position: absolute;
+      right: 55px;
+      bottom: 10px;
+      font-size: 0.8em;
+      color: #ccc;
+      font-style: italic;
+    }
+    a :hover{
+      color: orange;
+    }
   </style>
 </head>
 <body>
-  
 
   <!-- Page content here -->
 
   <div class="footer">
-    <p>&copy; Maintained By Akash Gupta.<a href="/Contacts/contact_us.html">Contact Us</a></p>
+    <p>&copy; Maintained By Akash Gupta. <a href="/Contacts/contact_us.html">Contact Us</a></p>
+
+
+    <a href="/Updates/update_corner.html"><div class="updated">Updated on: 5th July</div></a>
   </div>
 
 </body>
