@@ -24,7 +24,7 @@ document.getElementById('login').addEventListener('submit', function(e) {
     .then(token => {
       localStorage.setItem('token', token);
       setTimeout(() => {
-        window.location.href = '/Home.html';
+        window.location.href = '/index.html';
       }, 1000); // Delay to show loader
     })
     .catch(error => {
