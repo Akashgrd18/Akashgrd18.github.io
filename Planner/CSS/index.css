@@ -1,0 +1,103 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.welcome-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 70px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+  position:relative;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: yellow;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: glowBounce 2s ease-in-out infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes glowBounce {
+    0%, 100% {
+      transform: translateY();
+      text-shadow: 0 0 10px #4aa72e, 0 0 20px #4aa72e, 0 0 30px #4aa72e;
+    }
+    50% {
+      transform: translateY(-8px);
+      text-shadow: 0 0 20px #6fdc3f, 0 0 30px #6fdc3f, 0 0 0px #6fdc3f;
+    }
+  }
+  
+p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+.proceed-button {
+  padding: 14px 35px;
+  font-size: 18px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(255, 65, 108, 0.5);
+}
+
+.proceed-button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.7);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.copyright {
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 11px;
+   color: #ccc;
+   }
+  
+       .update {
+         position: absolute;
+         bottom: 10px;
+         right: 10px;
+         margin: 0;
+         font-size: 0.7em;
+       }
+   
+       .update a {
+         color: #93c3f5;
+         text-decoration: none;
+         font-style: italic;
+       }
+   
+       .update a:hover {
+         font-weight: bolder;
+         color: #076bd5;
+       }
+    

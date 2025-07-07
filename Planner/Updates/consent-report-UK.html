@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jp Query Page</title>
+  <link rel="icon" type="image/png" href="/Images/bat.favicon.logo.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f9f9f9, #e9f0f7);
+    }
+
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+  h2 {
+        text-align: center;
+        color: #333;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+
+      }
+    h3 {
+      text-align: center;
+      color: #333;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .query-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px dashed #ccc;
+      background-color: #fdfdfd;
+      min-height: 100px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .links {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .links a {
+      padding: 10px;
+      background-color: #d0e2ff;
+      color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 1px solid #aacbe2;
+      text-align: center;
+    }
+
+    .links a:hover {
+      background-color: #aacbe2;
+    }
+  </style>
+   
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <div id="navbar-container"></div>
+  
+  <!-- Main Content -->
+  <div class="content">
+     <script src="/JS/script.js"></script>
+    <h2>Consent-Report-UK (We have to send this query to L2 to get the report and follow this Email loops <I style="color: red;">RE: RITM1056891 consents reports</I> while sending this the report as a password protected)
+    </h2>
+    <div class="query-box">
+      SELECT DISTINCT t1.entity_id 'Customer ID', t1.email 'Email', t1.firstname 'First Name',t1.lastname 'Last Name',
+      t1.created_at 'Created Date', t1.updated_at 'Updated Date', t2.value 'Salesforce ID', t3.value 'Consent Email Marketing', 
+      t4.value 'Consent Mobile Marketing', t5.value 'Consent Push Notification', t6.value 'Consent Notification Center' 
+      from customer_entity t1 
+      LEFT JOIN customer_entity_text t2 ON t1.entity_id = t2.entity_id and t2.attribute_id=210
+      LEFT JOIN customer_entity_int t3 ON t1.entity_id = t3.entity_id and t3.attribute_id=186
+      LEFT JOIN customer_entity_int t4 ON t1.entity_id = t4.entity_id and t4.attribute_id=187
+      LEFT JOIN customer_entity_int t5 ON t1.entity_id = t5.entity_id and t5.attribute_id=586
+      LEFT JOIN customer_entity_int t6 ON t1.entity_id = t6.entity_id and t6.attribute_id=626
+      WHERE t1.store_id=45 AND DATE(t1.updated_at) = <B style="color: red;">'2025-07-06'</B> ORDER BY t1.updated_at DESC;
+    </div>
+    
+    
+    </div>
+    <h3>NOTE -> Make sure to change the date as previous day and the change the file type from .CSV to.xlsx</h3>
+
+  </div>
+
+</body>
+</html>
