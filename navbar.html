@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compact Navbar with Dropdowns</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0px 0;
+      height: 50px;
+    }
+    
+    .navbar-left,
+    .navbar-center,
+    .navbar-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-left {
+      justify-content: flex-start;
+      padding-left: 10px;
+    }
+    
+    .navbar-center {
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .navbar-right {
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropbtn {
+      background-color: #333;
+      color: white;
+      padding: 8px 12px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropbtn:hover {
+      background-color: #575757;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0d0101;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1001;
+      top: 100%;
+      left: 0;
+    }
+    
+    .dropdown-content a {
+      color: rgb(247, 243, 243);
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #685e5e;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    #clock {
+      color: #e6f7ff;
+      font-size: 18px;
+      background-color: #333;
+    }
+    
+    .navbar a {
+      color: #ffffff;
+      padding: 8px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    </style>
+ 
+ 
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <!-- Left section: Back link -->
+    <div class="navbar-left">
+      <a href="javascript:history.back()">Back</a>
+      <a href="/imp_links.html">Search</a>
+    </div>
+    
+
+
+    <!-- Center section: Dropdowns -->
+    <div class="navbar-center">
+      <!-- Home Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">Home</button>
+        <div class="dropdown-content">
+          <a href="/Home.html">Dashboard</a>
+          <a href="/index.html">Welcome Page</a>
+          <a><button style="background-color: orange;" onclick="logout()">Logout</button></a>
+
+        </div>
+      </div>
+
+      <!-- Links Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">Links</button>
+        <div class="dropdown-content">
+         
+          <a href="https://cognizantonline-my.sharepoint.com/:x:/r/personal/2033369_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7B9BBCBDD2-A6BD-40E7-AE48-66349B6001A1%7D&file=Smoke%20Test%20Local-Global%20Markets.xlsx&wdLOR=cF365C21F-7090-463B-B481-B5EF1FECCCA4&action=default&mobileredirect=true" target="_blank">Smoke Test Sheet</a>
+          <a href="https://aka.ms/edgeworkspaces/join?type=2&id=aHR0cHM6Ly9jb2duaXphbnRvbmxpbmUtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvMjE1MzAzN19jb2duaXphbnRfY29tL0VmLU5IQlRXMDlCTmpEdi1XMUgyRzE4Qm5yeVd4SkhfNHRYQVR3SzBGc25hNGc%3D&store=3&source=Workspaces" target="_blank">Smoke Test Sites</a>
+          <a href="https://batnowprod.service-now.com/nav_to.do?uri=%2F$pa_dashboard.do%3Fsysparm_dashboard%3D3a0964b4c3ae0a5014b9d62f0501319d%26sysparm_tab%3Db12920f4c3ae0a5014b9d62f050131c7%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse" target="_blank">SNOW</a>
+          <a href="https://one.newrelic.com/dashboards/detail/MzY3MDgyMXxWSVp8REFTSEJPQVJEfGRhOjk3MTEw?account=3670821&duration=3600000&state=79c7a96d-4ac1-c8f6-81e5-86b40d355e14" target="_blank">New Relics</a>
+          <a href="https://live.browserstack.com/#os=Windows&os_version=11&browser=Chrome&browser_version=137.0&device_browser=chrome&zoom_to_fit=true&full_screen=true&url=https%3A%2F%2Fwww.velo.com%2Fit%2Fit%2Fscopri-velo&speed=1" target="_blank">Browser Stack</a>
+        </div>
+      </div>
+
+      <!-- SOP Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">SOP</button>
+        <div class="dropdown-content">
+          <a href="https://bat.sharepoint.com/:w:/r/sites/Magento2BAUroom-SupportandServices/Shared%20Documents/Support%20and%20Services/Support%20Runbook/Global%20M2%20Support%20Handbook/BATSupport_Process_Handbook.docx?d=waaf65590da8943d680728ecd99777c74&csf=1&web=1&e=dACJdn" target="_blank">BAT HANDBOOK</a>
+          <a href="https://cognizantonline-my.sharepoint.com/:w:/r/personal/745931_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7B6EDB00C5-6CD3-41DA-9859-B75476169CAF%7D&file=B2B%20morning%20daily%20order%20checks.docx&wdLOR=cAF59BF48-C162-43E1-8765-AC3F780123FB&action=default&mobileredirect=true" target="_blank">B2B Morning checks</a>
+          <a href="https://bat.sharepoint.com/:w:/r/sites/MY50-ShopifyBAURoom/_layouts/15/Doc.aspx?sourcedoc=%7B9F185201-55DF-4D74-AAAB-EAC111D142E1%7D&file=L1.5%20Shopify%20Process%20Handbook%20-%20Digital%20Velocity.docx&action=default&mobileredirect=true" target="_blank">L1.5 Shopify - Digital Velocity</a>
+          <a href="https://cognizantonline-my.sharepoint.com/:w:/g/personal/2151379_cognizant_com/EW9J6sy39RNJiO4-glIM-x0BAfqwwGHsKtUq1ydEELF_Pw?e=BDcqei" target="_blank">IT | CAB 1 -  Order Status Update</a>
+          <a href="https://cognizantonline-my.sharepoint.com/:w:/g/personal/745931_cognizant_com/EcfXR7U5pGBKmIt0ZqiL1ZEBEG0Hk3AOQMNWYlRKymFqHg?e=nUSxKw" target="_blank">Vuse CA -L1.5</a>
+        </div>
+      </div>
+      <!-- MBO Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">MBO</button>
+        <div class="dropdown-content">
+          <a href="https://admin-uk-live-unitedkingdom.prod.marketing.bat.net/smc/admin/dashboard/index/key/c6577c471782dde99f284ce32524827313137c7c554a4f6e66dafd347a7e604a/" target="_blank">UK</a>
+          <a href="https://admin-de-live-germany.prod.marketing.bat.net/smc/admin" target="_blank">CEN</a>
+          <a href="https://admin-eu-live-global.prod.marketing.bat.net/smc/admin" target="_blank">EU</a>
+          <a href="https://admin-it-live-italy.prod.marketing.bat.net/smc/admin/" target="_blank">IT</a>
+          <a href="https://mcprod.shopglovelo.jp/smc/admin">JP/KR</a>
+          <a href="https://mcprod.batgen.com/admin_6PMwK1vB/" target="_blank">B2B FR</a>
+          <a href="https://mcprod.orderbat.co.kr/backoffice" target="_blank">B2B KR</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Roster</button>
+        <div class="dropdown-content">
+          <a href="https://bat.sharepoint.com/:x:/r/sites/Magento2BAUroom/_layouts/15/Doc2.aspx?action=edit&sourcedoc=%7Bef472250-0f93-4098-bbce-d86b330b134e%7D&wdOrigin=TEAMS-MAGLEV.teamsSdk_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1722239622194&web=1&wdLOR=cDC706996-F082-4792-B7B4-655F9A241503" target="_blank">M2</a>
+          <a href="https://bat.sharepoint.com/:x:/r/sites/Magento2BAUroom/_layouts/15/doc2.aspx?sourcedoc=%7BB679A3F4-7D8B-457E-8F34-B8AF32137888%7D&file=AEM%20-%20Cognizant%20Support%20Roster%20.xlsx&action=default&mobileredirect=true&ovuser=de08c407-19b9-427d-9fe8-edf254300ca7%2C2153037%40cognizant.com&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA3MTEyODgyNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&wdLOR=cAEEC1CCC-9177-4042-AD21-9B9146B92062" target="_blank">AEM</a>
+          <a href="https://cognizantonline.sharepoint.com/:x:/s/ShopifyPlatformCognizant/EUnATSzE1z1NrN4qXyCFtNIBHDO7mNkIwN5ZC3g0NRzvwQ?e=RubZ9Y&wdLOR=cE54F5C0C-BA7F-4377-ACD6-47ED7489927E" target="_blank">Shopify</a>
+          <a href=" https://cognizantonline-my.sharepoint.com/:x:/r/personal/745931_cognizant_com/Documents/BAT-L1.5-April1%20files%20folder/BAT%20Shift%20Schedule.xlsx?d=w161188e422104eb585daf9866801a659&csf=1&web=1&e=R0GQJq" target="_blank">L1.5</a>
+          <a href="https://cognizantonline-my.sharepoint.com/:x:/r/personal/672054_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7BDF161690-F472-4D24-A6F1-374103BC3EFB%7D&file=Vuse%20CA%20Custom%20Apps%20-%20Cognizant%20Support%20Roster.xlsx&action=default&mobileredirect=true" target="_blank">Custom Apps</a>
+          <a href="https://cognizantonline.sharepoint.com/:x:/r/sites/BAT/_layouts/15/doc2.aspx?sourcedoc=%7B0C38F3A3-3235-44B3-8EE1-385433F71CFE%7D&file=CloudDBDevOps%20Support%20Roster%20-%20BAT.xlsx&action=default&mobileredirect=true&wdLOR=cBF6DF6EA-50FC-48C2-9561-EEF58C6857B1" target="_blank">DevOps</a>
+        </div>
+        
+      </div>
+
+      <!-- Contact Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn" style="color: #ff4c4c; font-weight: bolder; font-size: 13px;">🔴Updates</button>
+        <div class="dropdown-content">
+          <a href="https://cognizantonline-my.sharepoint.com/:w:/g/personal/2151379_cognizant_com/EW9J6sy39RNJiO4-glIM-x0BAfqwwGHsKtUq1ydEELF_Pw?e=BDcqei" target="_blank">IT | CAB 1 -  Order Status Update</a>
+          <a href="/Updates/NEW_TEMPORARY_QUALYS_SCAN_SCHEDULE.html">NEW TEMPORARY QUALYS SCAN SCHEDULE</a>
+          <a href="/Updates/consent-report-UK.html">Consent Report UK</a>
+          <a href="/Images/open_loyality.png" target="_blank>">Open Loyality (OL)</a>
+          
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" style="font-size: 12px;">World🕒</button>
+        <a class="dropdown-content" id="custom-timezone-dropdown" style="color: #e6f7ff;">
+          <!-- Dynamic options will be inserted here -->
+        </a>
+      </div>
+    </div>
+
+    <!-- Right section: Clock -->
+    <div class="navbar-right">
+     
+      <a href="/international_clock.html"><h2 id="clock"></h2></a>
+      
+      
+    </div>
+  </div>
+  <div id="test-container"></div>
+
+  <script src="/JS/script.js" ></script>
+  
+</body>
+</html>

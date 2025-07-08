@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World Clock</title>
+  <link rel="icon" type="image/png" href="/Images/bat.favicon.logo.png">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000000; /* Full black background */
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .world-clock-wrapper {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .world-clock-wrapper select {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .world-clock-wrapper #clock {
+      font-size: 48px;
+      margin-top: 70px;
+      font-weight: bold;
+      background-color:  #000000;
+    }
+  </style>
+  <script src="/JS/script.js"></script>
+</head>
+<body>
+  Navigation Bar
+  <div id="navbar-container"></div> 
+
+  <div class="world-clock-wrapper">
+    <h1>World Clock</h1>
+    <h3 style="font-weight: lighter;">Select Time Zone</h3>
+    
+    <select id="timezone">
+      <option value="Asia/Kolkata">India (IST)</option>
+      <option value="America/New_York">US (New York - EST)</option>
+      <option value="Europe/Berlin">Germany (CET)</option>
+      <option value="Europe/Rome">Italy (CET)</option>
+      <option value="Asia/Tokyo">Japan (JST)/Korea (KST)</option>
+      <option value="Africa/Johannesburg">South Africa (SAST)</option>
+      <option value="Europe/Paris">France (CET)</option>
+    </select>
+
+    <div id="clock">--:--:--</div>
+  </div>
+
+  <script>
+    const clockElement = document.getElementById('clock');
+    const timezoneSelect = document.getElementById('timezone');
+
+    function updateClock() {
+      const now = new Date();
+      const timeZone = timezoneSelect.value;
+      const timeString = new Intl.DateTimeFormat('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+        timeZone: timeZone
+      }).format(now);
+      clockElement.textContent = timeString;
+    }
+
+    timezoneSelect.addEventListener('change', updateClock);
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call
+  </script>
+</body>
+</html>
