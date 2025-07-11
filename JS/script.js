@@ -34,7 +34,7 @@ function Time() {                                                               
 
     "India---": "Asia/Kolkata",
 
-    "UK------": "America/New_York",
+   "UK------": "Europe/London",
 
     "CEN/ IT-": "Europe/Berlin",
 
