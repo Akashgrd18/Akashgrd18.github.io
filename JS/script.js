@@ -85,22 +85,22 @@ function Time() {                                                               
   populateDropdown();
   updateClock();
 }
-const token = localStorage.getItem('token');                              //For token expiration check
+// const token = localStorage.getItem('token');                              //For token expiration check
 
-    function isTokenExpired(token) {
-      try {
-        const payload = JSON.parse(atob(token.split('.')[1]));
-        const now = Math.floor(Date.now() / 1000);
-        return now >= payload.exp;
-      } catch (e) {
-        return true; // Treat malformed token as expired
-      }
-    }
+//     function isTokenExpired(token) {
+//       try {
+//         const payload = JSON.parse(atob(token.split('.')[1]));
+//         const now = Math.floor(Date.now() / 1000);
+//         return now >= payload.exp;
+//       } catch (e) {
+//         return true; // Treat malformed token as expired
+//       }
+//     }
 
-    if (!token || isTokenExpired(token)) {
-      localStorage.removeItem('token');
-      window.location.href = '/signin.html';
-    }
+//     if (!token || isTokenExpired(token)) {
+//       localStorage.removeItem('token');
+//       window.location.href = '/signin.html';
+//     }
 
 
 //back and forword
